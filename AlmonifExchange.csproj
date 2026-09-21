@@ -1,14 +1,22 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <!-- ترقية إلى .NET 8 لحل تحذيرات الدعم -->
+    <TargetFramework>net8.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <Nullable>enable</Nullable>
+    
+    <!-- تعطيل Nullable لمنع أخطاء القيم الفارغة في الأكوold -->
+    <Nullable>disable</Nullable>
+    
     <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationIcon></ApplicationIcon>
     <StartupObject>AlmonifExchange.Program</StartupObject>
   </PropertyGroup>
+
   <ItemGroup>
+    <!-- مكتبة الواجهات -->
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.6" />
+    
+    <!-- ✅ هذه هي المكتبة المفقودة التي تسبب خطأ SqlConnection -->
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
   </ItemGroup>
 </Project>
