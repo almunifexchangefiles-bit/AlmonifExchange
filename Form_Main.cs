@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -31,7 +31,7 @@ namespace AlmonifExchange
         private ToolStripStatusLabel statusLabel_Date;
         private ToolStripStatusLabel statusLabel_Time;
         private Panel panel_Content;
-        private Timer timer1;
+        private System.Windows.Forms.Timer timer1;
 
         public Form_Main()
         {
@@ -47,7 +47,7 @@ namespace AlmonifExchange
             this.menuStrip1 = new MenuStrip();
             this.statusStrip1 = new StatusStrip();
             this.panel_Content = new Panel();
-            this.timer1 = new Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             
             // MenuStrip
             this.menuStrip1.Font = new Font("Arial", 11F, FontStyle.Bold);

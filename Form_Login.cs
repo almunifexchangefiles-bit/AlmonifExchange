@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Data;
@@ -19,7 +19,7 @@ private PictureBox pictureBox1, pictureBox2, pictureBox3;
 private Panel panel1, panel2;
 private GroupBox groupBox1;
 private System.ComponentModel.BackgroundWorker backgroundWorker1;
-private Timer timer1;
+private System.Windows.Forms.Timer timer1;
 
     public Form_Login()
      {
@@ -88,7 +88,7 @@ private Timer timer1;
          this.label_Chek_DataInLogin = new Label();
          this.button_Exit = new Button();
          this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-         this.timer1 = new Timer(this.components);
+         this.timer1 = new System.Windows.Forms.Timer(this.components);
          this.panel1.SuspendLayout();
          this.panel2.SuspendLayout();
          this.groupBox1.SuspendLayout();
